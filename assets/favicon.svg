@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="secrets.wtf mark">
+  <rect width="64" height="64" fill="#0b0f0f"/>
+  <path d="M14 34h36v16H14z" fill="#ddfff2" stroke="#00a870" stroke-width="3"/>
+  <path d="M22 34V23a10 10 0 0 1 20 0v11" fill="none" stroke="#f7ff8f" stroke-width="5" stroke-linecap="square"/>
+  <path d="M31 40h2v5h-2z" fill="#0b0f0f"/>
+</svg>

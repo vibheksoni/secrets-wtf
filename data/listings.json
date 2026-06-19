@@ -1,0 +1,29 @@
+{
+  "updated": "2026-06-19",
+  "groups": [
+    {
+      "id": "ai-infra",
+      "name": "AI Infrastructure",
+      "listings": [
+        {
+          "id": "ollama",
+          "name": "Ollama exposed API",
+          "url": "/listings/ollama/",
+          "port": 11434,
+          "hostCount": 94,
+          "hostDataUrl": "/data/hosts/ollama.json",
+          "researchUrl": "https://opendoors.wtf/blog/ollama-api-security/"
+        },
+        {
+          "id": "lmstudio",
+          "name": "LM Studio local server",
+          "url": "/listings/lm-studio/",
+          "port": 1234,
+          "hostCount": 87,
+          "hostDataUrl": "/data/hosts/lmstudio.json",
+          "researchUrl": "https://opendoors.wtf/blog/lmstudio-api-security/"
+        }
+      ]
+    }
+  ]
+}

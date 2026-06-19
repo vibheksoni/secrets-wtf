@@ -1,0 +1,10 @@
+{
+    "name": "secrets.wtf",
+    "short_name": "secrets.wtf",
+    "description": "Public exposure listings for exposed AI infrastructure hosts.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#eef2f0",
+    "theme_color": "#0b0f0f",
+    "icons": []
+}

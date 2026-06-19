@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ollama Exposed API | secrets.wtf</title>
+    <meta name="description" content="Public Ollama API exposure listing with live host rows and /v1/models checks.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0b0f0f">
+    <link rel="canonical" href="https://secrets.wtf/listings/ollama/">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="me" href="https://vibheksoni.com/">
+    <link rel="me" href="https://opendoors.wtf/">
+    <link rel="me" href="https://buymeacoffee.com/vibheksoni">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://secrets.wtf/listings/ollama/">
+    <meta property="og:title" content="Ollama Exposed API | secrets.wtf">
+    <meta property="og:description" content="Public Ollama API exposure listing with live host rows and /v1/models checks.">
+    <meta property="og:image" content="https://secrets.wtf/assets/secrets-wtf-social.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="secrets.wtf public exposure listing for Ollama APIs">
+    <meta property="og:site_name" content="secrets.wtf">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ollama Exposed API | secrets.wtf">
+    <meta name="twitter:description" content="Public Ollama API exposure listing with live host rows and /v1/models checks.">
+    <meta name="twitter:image" content="https://secrets.wtf/assets/secrets-wtf-social.png">
+    <meta name="twitter:image:alt" content="secrets.wtf public exposure listing for Ollama APIs">
+    <meta name="twitter:creator" content="@ImVibhek">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "@id": "https://secrets.wtf/listings/ollama/#article",
+        "name": "Ollama exposed API hosts",
+        "description": "Public Ollama API exposure listing with live host rows and /v1/models checks.",
+        "url": "https://secrets.wtf/listings/ollama/",
+        "creator": {
+            "@type": "Person",
+            "@id": "https://vibheksoni.com/#vibhek-soni",
+            "name": "Vibhek Soni",
+            "url": "https://vibheksoni.com/"
+        },
+        "keywords": ["Ollama", "AI infrastructure", "public exposure", "model API"],
+        "dateModified": "2026-06-19"
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/" aria-label="secrets.wtf home">
+            <span class="brand-mark">secrets</span><span class="brand-dot">.wtf</span>
+        </a>
+        <nav aria-label="Primary" data-site-nav>
+            <a href="/#ai-infra">Listings</a>
+            <a href="/listings/ollama/">Ollama</a>
+            <a href="/listings/lm-studio/">LM Studio</a>
+            <a href="https://opendoors.wtf/" rel="me noopener" target="_blank">OpenDoors<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="listing-detail">
+            <div class="detail-title">
+                <p class="eyebrow">Ollama</p>
+                <h1>Ollama exposed API</h1>
+                <p>
+                    Public Ollama model API endpoints.
+                </p>
+            </div>
+            <aside class="detail-summary" aria-label="Listing summary">
+                <div>
+                    <span>surface</span>
+                    <strong>port 11434</strong>
+                </div>
+                <div>
+                    <span>hosts</span>
+                    <strong>94</strong>
+                </div>
+                <div>
+                    <span>check</span>
+                    <strong>/v1/models</strong>
+                </div>
+                <div>
+                    <span>link</span>
+                    <strong><a href="https://opendoors.wtf/blog/ollama-api-security/">research</a></strong>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section compact-section">
+            <p class="eyebrow">host inventory</p>
+            <h2>Observed hosts</h2>
+            <div class="table-controls">
+                <label class="search-box">
+                    <span>Filter hosts</span>
+                    <input id="host-filter" type="search" placeholder="host, model, status..." autocomplete="off">
+                </label>
+                <div class="host-actions">
+                    <button class="button small secondary" id="check-visible-hosts" type="button">Check page</button>
+                    <button class="button small secondary" id="check-all-hosts" type="button">Check all</button>
+                </div>
+            </div>
+            <details class="contrib-panel" data-default-port="11434">
+                <summary>Add or export hosts</summary>
+                <form class="host-add-form" id="host-add-form">
+                    <label>
+                        <span>Add host</span>
+                        <input id="host-endpoint-input" type="text" placeholder="http://1.2.3.4:11434 or 1.2.3.4">
+                    </label>
+                    <label>
+                        <span>Models</span>
+                        <input id="host-models-input" type="text" placeholder="optional comma-separated models">
+                    </label>
+                    <button class="button small" type="submit">Add</button>
+                </form>
+                <div class="state-actions">
+                    <button class="button small secondary" id="sync-local-hosts" type="button">Sync added</button>
+                    <button class="button small secondary" id="export-local-hosts" type="button">Export additions</button>
+                    <button class="button small secondary" id="clear-local-hosts" type="button">Clear additions</button>
+                </div>
+                <p class="state-note" id="host-state-note">Added hosts stay in this browser. Export additions to share.</p>
+            </details>
+            <div class="host-table" id="host-table" data-service="ollama" data-hosts="/data/hosts/ollama.json" data-page-size="10">
+                <div class="host-row host-head">
+                    <span>host</span>
+                    <span>models</span>
+                    <span>status</span>
+                    <span>check</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>secrets.wtf by <a href="https://vibheksoni.com/" rel="me">Vibhek Soni</a></span>
+        <span>Support updates: <a href="https://buymeacoffee.com/vibheksoni" rel="me noopener" target="_blank">Buy Me a Coffee</a></span>
+        <span><a href="/">Back to index</a></span>
+    </footer>
+    <script src="/js/site-nav.js"></script>
+    <script src="/js/hosts.js"></script>
+</body>
+</html>

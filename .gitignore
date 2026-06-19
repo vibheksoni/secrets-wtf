@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+.env
+.env.*
+.codex-*
+.*.json
+.*/
+scripts/scan_hosts.py
