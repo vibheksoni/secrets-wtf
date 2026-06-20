@@ -234,34 +234,52 @@
     </header>
 
     <main>
-        <section class="index-panel" aria-labelledby="hero-title">
-            <div class="index-copy">
-                <p class="eyebrow">public exposure listing</p>
+        <section class="index-hero" aria-labelledby="hero-title">
+            <div class="hero-cta">
                 <h1 id="hero-title">AI infrastructure exposures.</h1>
                 <p>
                     Public host listings for exposed Ollama and LM Studio APIs.
                 </p>
+                <div class="hero-actions">
+                    <a class="button" href="#ai-infra">View listings</a>
+                    <a class="button secondary" href="https://github.com/vibheksoni/secrets-wtf/issues/new/choose" rel="noopener" target="_blank">Request removal<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a>
+                </div>
             </div>
-            <div class="index-stats" aria-label="Current index status">
-                <div>
-                    <span>Ollama</span>
-                    <strong><span data-live-count="ollama">94</span> hosts</strong>
-                </div>
-                <div>
-                    <span>LM Studio</span>
-                    <strong><span data-live-count="lmstudio">87</span> hosts</strong>
-                </div>
-                <div>
-                    <span>Total</span>
-                    <strong><span data-live-count="total">181</span> hosts</strong>
+            <div class="hero-visual" aria-label="Current exposure index totals">
+                <canvas
+                    class="dither-canvas"
+                    data-dither-canvas
+                    data-cell-size="9"
+                    data-min-speed="0.0009"
+                    data-max-speed="0.0032"
+                    data-noise="0.28"
+                    data-active-noise="0.48"
+                    data-pointer-influence="0.62"
+                    data-scroll-influence="0.28"
+                    data-accent="#00a870"
+                    data-ink="#101312"
+                    data-bg="#fbfbf8"
+                    aria-hidden="true"></canvas>
+                <div class="index-stats">
+                    <div>
+                        <span>Ollama</span>
+                        <strong><span data-live-count="ollama">94</span> hosts</strong>
+                    </div>
+                    <div>
+                        <span>LM Studio</span>
+                        <strong><span data-live-count="lmstudio">87</span> hosts</strong>
+                    </div>
+                    <div>
+                        <span>Total</span>
+                        <strong><span data-live-count="total">181</span> hosts</strong>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="ai-infra" class="section compact-section">
+        <section id="ai-infra" class="section compact-section index-workbench">
             <div class="section-head">
                 <div>
-                    <p class="eyebrow">active listings</p>
                     <h2>AI Infrastructure</h2>
                 </div>
                 <label class="search-box">
@@ -273,57 +291,36 @@
             <div class="listing-table" id="listing-grid">
                 <article class="listing-row" data-name="ollama" data-tags="ai-infra local-llm model-api port-11434 host-inventory">
                     <div class="row-main">
-                        <h3>Ollama exposed API</h3>
-                        <p>
-                            Public Ollama model API endpoints.
-                        </p>
+                        <div class="row-title">
+                            <h3>Ollama exposed API</h3>
+                            <span><strong data-live-count="ollama">94</strong> exposed hosts</span>
+                        </div>
+                        <p>Ollama model API surface.</p>
                     </div>
-                    <dl class="row-facts">
-                        <div>
-                            <dt>Surface</dt>
-                            <dd>Port 11434</dd>
-                        </div>
-                        <div>
-                            <dt>Hosts</dt>
-                            <dd><span data-live-count="ollama">94</span> exposed hosts</dd>
-                        </div>
-                        <div>
-                            <dt>Data</dt>
-                            <dd>hosts + models</dd>
-                        </div>
-                    </dl>
                     <div class="row-actions">
                         <a class="button small" href="/listings/ollama/">Open listing</a>
-                        <a class="button small secondary" href="https://opendoors.wtf/blog/ollama-api-security/">Research</a>
+                        <a class="button small secondary" href="https://opendoors.wtf/blog/ollama-api-security/" rel="me noopener" target="_blank">Research<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a>
                     </div>
                 </article>
 
                 <article class="listing-row" data-name="lm studio" data-tags="ai-infra local-llm openai-compatible port-1234 host-inventory">
                     <div class="row-main">
-                        <h3>LM Studio local server</h3>
-                        <p>
-                            Public OpenAI-compatible LM Studio servers.
-                        </p>
+                        <div class="row-title">
+                            <h3>LM Studio local server</h3>
+                            <span><strong data-live-count="lmstudio">87</strong> exposed hosts</span>
+                        </div>
+                        <p>OpenAI-compatible local server surface.</p>
                     </div>
-                    <dl class="row-facts">
-                        <div>
-                            <dt>Surface</dt>
-                            <dd>Port 1234</dd>
-                        </div>
-                        <div>
-                            <dt>Hosts</dt>
-                            <dd><span data-live-count="lmstudio">87</span> exposed hosts</dd>
-                        </div>
-                        <div>
-                            <dt>Data</dt>
-                            <dd>hosts + models</dd>
-                        </div>
-                    </dl>
                     <div class="row-actions">
                         <a class="button small" href="/listings/lm-studio/">Open listing</a>
-                        <a class="button small secondary" href="https://opendoors.wtf/blog/lmstudio-api-security/">Research</a>
+                        <a class="button small secondary" href="https://opendoors.wtf/blog/lmstudio-api-security/" rel="me noopener" target="_blank">Research<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a>
                     </div>
                 </article>
+            </div>
+            <div class="listing-actions" aria-label="Contribute or request cleanup">
+                <a href="https://github.com/vibheksoni/secrets-wtf/issues/new/choose" rel="noopener" target="_blank">Request removal<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a>
+                <a href="https://github.com/vibheksoni/secrets-wtf/pulls" rel="noopener" target="_blank">Submit hosts<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a>
+                <a href="https://opendoors.wtf/" rel="me noopener" target="_blank">OpenDoors research<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a>
             </div>
             <p class="empty-state" id="empty-state" hidden>No matching listings yet.</p>
         </section>
@@ -331,8 +328,8 @@
 
     <footer>
         <span>secrets.wtf by <a href="https://vibheksoni.com/" rel="me author">Vibhek Soni</a> / vibheksoni / @ImVibhek</span>
-        <span>Research context: <a href="https://opendoors.wtf/" rel="me">OpenDoors</a></span>
-        <span>Support updates: <a href="https://buymeacoffee.com/vibheksoni" rel="me noopener" target="_blank">Buy Me a Coffee</a></span>
+        <span>Research context: <a href="https://opendoors.wtf/" rel="me noopener" target="_blank">OpenDoors<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a></span>
+        <span>Support updates: <a href="https://buymeacoffee.com/vibheksoni" rel="me noopener" target="_blank">Buy Me a Coffee<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a></span>
     </footer>
 
     <script src="/js/site-nav.js"></script>

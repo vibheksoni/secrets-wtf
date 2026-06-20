@@ -43,12 +43,12 @@ Do not use listed hosts to run workloads, harvest data, test private systems, by
 
 ## Current Listings
 
-| Listing | Surface | Hosts | Data |
-| --- | --- | ---: | --- |
-| [Ollama exposed API](https://secrets.wtf/listings/ollama/) | Port `11434` | 94 | [`ollama.json`](data/hosts/ollama.json) |
-| [LM Studio local server](https://secrets.wtf/listings/lm-studio/) | Port `1234` | 87 | [`lmstudio.json`](data/hosts/lmstudio.json) |
+| Listing | Surface | Hosts |
+| --- | --- | ---: |
+| [Ollama exposed API](https://secrets.wtf/listings/ollama/) | Ollama model API | 94 |
+| [LM Studio local server](https://secrets.wtf/listings/lm-studio/) | OpenAI-compatible local server | 87 |
 
-Each listing page supports filtering, pagination, local host additions, and export for review.
+Each listing page supports filtering, pagination, and expandable model observations.
 
 ## Why It Exists
 

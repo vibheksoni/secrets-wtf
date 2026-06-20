@@ -117,7 +117,7 @@
                 "variableMeasured": [
                     "host endpoint",
                     "model list response",
-                    "client-side availability state"
+                    "observed availability state"
                 ],
                 "isAccessibleForFree": true,
                 "dateModified": "2026-06-20",
@@ -227,12 +227,8 @@
                     <strong>94</strong>
                 </div>
                 <div>
-                    <span>data</span>
-                    <strong>hosts + models</strong>
-                </div>
-                <div>
                     <span>link</span>
-                    <strong><a href="https://opendoors.wtf/blog/ollama-api-security/">research</a></strong>
+                    <strong><a href="https://opendoors.wtf/blog/ollama-api-security/" rel="me noopener" target="_blank">research<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a></strong>
                 </div>
             </aside>
         </section>
@@ -243,28 +239,9 @@
             <div class="table-controls">
                 <label class="search-box">
                     <span>Filter hosts</span>
-                    <input id="host-filter" type="search" placeholder="host, model, status..." autocomplete="off">
+                    <input id="host-filter" type="search" placeholder="host, model, state..." autocomplete="off">
                 </label>
             </div>
-            <details class="contrib-panel" data-default-port="11434">
-                <summary>Add or export hosts</summary>
-                <form class="host-add-form" id="host-add-form">
-                    <label>
-                        <span>Add host</span>
-                        <input id="host-endpoint-input" type="text" placeholder="http://1.2.3.4:11434 or 1.2.3.4">
-                    </label>
-                    <label>
-                        <span>Models</span>
-                        <input id="host-models-input" type="text" placeholder="optional comma-separated models">
-                    </label>
-                    <button class="button small" type="submit">Add</button>
-                </form>
-                <div class="state-actions">
-                    <button class="button small secondary" id="export-local-hosts" type="button">Export additions</button>
-                    <button class="button small secondary" id="clear-local-hosts" type="button">Clear additions</button>
-                </div>
-                <p class="state-note" id="host-state-note">Added hosts stay in this browser. Export additions to share.</p>
-            </details>
             <div class="host-table" id="host-table" data-service="ollama" data-hosts="/data/hosts/ollama.json" data-page-size="10">
                 <div class="host-row host-head">
                     <span>host</span>
@@ -277,7 +254,7 @@
 
     <footer>
         <span>secrets.wtf by <a href="https://vibheksoni.com/" rel="me author">Vibhek Soni</a> / vibheksoni / @ImVibhek</span>
-        <span>Support updates: <a href="https://buymeacoffee.com/vibheksoni" rel="me noopener" target="_blank">Buy Me a Coffee</a></span>
+        <span>Support updates: <a href="https://buymeacoffee.com/vibheksoni" rel="me noopener" target="_blank">Buy Me a Coffee<svg class="external-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3h8v8h-2V6.41l-6.3 6.3-1.4-1.42L9.59 5H5V3z"></path></svg></a></span>
         <span><a href="/">Back to index</a></span>
     </footer>
     <script src="/js/site-nav.js"></script>
