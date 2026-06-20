@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://secrets.wtf/">
-    <img src="assets/secrets-wtf-social.png" alt="secrets.wtf - public exposure listings for AI infrastructure" width="1200">
+    <img src="assets/secrets.wtf.png" alt="secrets.wtf - public exposure listings for AI infrastructure" width="1200">
   </a>
 </p>
 
