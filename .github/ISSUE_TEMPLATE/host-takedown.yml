@@ -1,0 +1,62 @@
+name: Host takedown request
+description: Request removal of a host from a secrets.wtf listing.
+title: "Host takedown: "
+labels: ["host-takedown"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if you own or operate a listed host and want it removed from secrets.wtf.
+        Please do not include private credentials, tokens, customer data, internal screenshots, or unrelated sensitive details.
+
+  - type: input
+    id: host
+    attributes:
+      label: Host or URL
+      description: Paste the exact host, IP, URL, or endpoint shown in the listing.
+      placeholder: "http://1.2.3.4:11434"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: listing
+    attributes:
+      label: Listing
+      description: Which listing contains the host?
+      options:
+        - Ollama exposed API
+        - LM Studio local server
+        - Other / new category
+    validations:
+      required: true
+
+  - type: textarea
+    id: operator-note
+    attributes:
+      label: Operator note
+      description: Briefly explain your relationship to the host.
+      placeholder: "I operate this host / I manage this network / I am filing on behalf of the operator."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Current status
+      description: What changed?
+      options:
+        - Secured or firewalled
+        - Service shut down
+        - False positive
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Add any useful context for reviewing the removal request.
+      placeholder: "The API is now bound to localhost / firewall rule added / endpoint removed."
+    validations:
+      required: false
