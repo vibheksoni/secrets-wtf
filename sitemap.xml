@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://secrets.wtf/</loc>
-        <lastmod>2026-06-19</lastmod>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://secrets.wtf/assets/secrets-wtf-social.png</image:loc>
+            <image:title>secrets.wtf AI infrastructure exposure listings</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://secrets.wtf/listings/ollama/</loc>
-        <lastmod>2026-06-19</lastmod>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://secrets.wtf/assets/secrets-wtf-social.png</image:loc>
+            <image:title>Ollama exposed API listing</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://secrets.wtf/listings/lm-studio/</loc>
-        <lastmod>2026-06-19</lastmod>
+        <lastmod>2026-06-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://secrets.wtf/assets/secrets-wtf-social.png</image:loc>
+            <image:title>LM Studio local server exposure listing</image:title>
+        </image:image>
     </url>
 </urlset>
