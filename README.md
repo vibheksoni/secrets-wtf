@@ -31,7 +31,7 @@ The current focus is:
 - exposed Ollama API hosts
 - exposed LM Studio local servers
 - OpenAI-compatible local LLM APIs
-- `/v1/models` availability checks
+- model observations from public host inventories
 - public exposure tracking for local AI tooling
 - takedown and cleanup requests from host owners
 
@@ -43,12 +43,12 @@ Do not use listed hosts to run workloads, harvest data, test private systems, by
 
 ## Current Listings
 
-| Listing | Surface | Hosts | Check | Data |
-| --- | --- | ---: | --- | --- |
-| [Ollama exposed API](https://secrets.wtf/listings/ollama/) | Port `11434` | 94 | `/v1/models` | [`ollama.json`](data/hosts/ollama.json) |
-| [LM Studio local server](https://secrets.wtf/listings/lm-studio/) | Port `1234` | 87 | `/v1/models` | [`lmstudio.json`](data/hosts/lmstudio.json) |
+| Listing | Surface | Hosts | Data |
+| --- | --- | ---: | --- |
+| [Ollama exposed API](https://secrets.wtf/listings/ollama/) | Port `11434` | 94 | [`ollama.json`](data/hosts/ollama.json) |
+| [LM Studio local server](https://secrets.wtf/listings/lm-studio/) | Port `1234` | 87 | [`lmstudio.json`](data/hosts/lmstudio.json) |
 
-Each listing page supports filtering, pagination, host checks, local host additions, and export for review.
+Each listing page supports filtering, pagination, local host additions, and export for review.
 
 ## Why It Exists
 
@@ -71,7 +71,7 @@ Good contributions include:
 - removal of dead, false-positive, or remediated hosts
 - model observations where available
 - new AI infrastructure exposure categories
-- improvements to listing UI, checks, pagination, or filtering
+- improvements to listing UI, pagination, filtering, or data handling
 - related OpenDoors research links
 - metadata, accessibility, or GitHub Pages fixes
 

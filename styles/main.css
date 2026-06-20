@@ -122,7 +122,7 @@ main {
 
 .index-panel {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.6fr);
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.72fr);
     gap: 0;
     margin-bottom: 14px;
     background: var(--panel);
@@ -151,7 +151,7 @@ main {
 
 .index-stats {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .index-stats div {
@@ -163,11 +163,11 @@ main {
     border-bottom: 1px solid var(--soft-line);
 }
 
-.index-stats div:nth-last-child(-n + 2) {
+.index-stats div:nth-last-child(-n + 3) {
     border-bottom: 0;
 }
 
-.index-stats div:nth-child(odd) {
+.index-stats div:not(:last-child) {
     border-right: 1px solid var(--soft-line);
 }
 
@@ -584,12 +584,6 @@ dd {
     margin-top: 14px;
 }
 
-.host-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
 .contrib-panel {
     display: grid;
     gap: 10px;
@@ -657,8 +651,10 @@ dd {
 
 .host-row {
     display: grid;
-    grid-template-columns: minmax(240px, 1.1fr) minmax(260px, 1fr) minmax(130px, 0.5fr) 86px;
+    grid-template-columns: minmax(260px, 1.1fr) minmax(220px, 1fr) minmax(110px, 0.38fr);
     gap: 10px;
+    align-items: center;
+    min-height: 58px;
     padding: 10px 12px;
     border-bottom: 1px solid var(--soft-line);
     font-family: var(--mono);
@@ -698,6 +694,50 @@ dd {
     font-style: normal;
 }
 
+.models-cell {
+    align-self: stretch;
+    display: grid;
+    align-items: center;
+}
+
+.models-count {
+    color: var(--muted);
+    font-weight: 800;
+}
+
+.models-details {
+    min-width: 0;
+}
+
+.models-details summary {
+    cursor: pointer;
+    color: var(--ink);
+    font-weight: 800;
+}
+
+.models-details summary:hover {
+    color: #004dff;
+}
+
+.model-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.model-list span,
+.model-list em {
+    min-height: 24px;
+    padding: 3px 6px;
+    background: #f4f6f5;
+    border: 1px solid var(--soft-line);
+    color: var(--ink);
+    font-size: 0.78rem;
+    font-style: normal;
+    overflow-wrap: anywhere;
+}
+
 .host-pagination {
     display: flex;
     flex-wrap: wrap;
@@ -716,15 +756,6 @@ dd {
 .host-status {
     color: var(--muted);
     font-weight: 800;
-}
-
-.host-check {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.host-check .button {
-    min-height: 28px;
 }
 
 .table-note {
@@ -897,14 +928,6 @@ footer {
 
     .host-head {
         display: none;
-    }
-
-    .host-check {
-        justify-content: flex-start;
-    }
-
-    .host-check .button {
-        min-height: 36px;
     }
 
     .row-actions {

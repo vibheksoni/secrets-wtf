@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LM Studio Local Server Exposure | secrets.wtf</title>
     <meta name="title" content="LM Studio Local Server Exposure | secrets.wtf">
-    <meta name="description" content="Public LM Studio server exposure listing with live host rows and /v1/models checks.">
+    <meta name="description" content="Public LM Studio server exposure listing with host rows and observed models.">
     <meta name="author" content="Vibhek Soni">
     <meta name="creator" content="Vibhek Soni">
     <meta name="publisher" content="Vibhek Soni">
@@ -32,7 +32,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://secrets.wtf/listings/lm-studio/">
     <meta property="og:title" content="LM Studio Local Server Exposure | secrets.wtf">
-    <meta property="og:description" content="Public LM Studio server exposure listing with live host rows and /v1/models checks.">
+    <meta property="og:description" content="Public LM Studio server exposure listing with host rows and observed models.">
     <meta property="og:image" content="https://secrets.wtf/assets/secrets-wtf-social.png">
     <meta property="og:image:secure_url" content="https://secrets.wtf/assets/secrets-wtf-social.png">
     <meta property="og:image:type" content="image/png">
@@ -43,7 +43,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LM Studio Local Server Exposure | secrets.wtf">
-    <meta name="twitter:description" content="Public LM Studio server exposure listing with live host rows and /v1/models checks.">
+    <meta name="twitter:description" content="Public LM Studio server exposure listing with host rows and observed models.">
     <meta name="twitter:image" content="https://secrets.wtf/assets/secrets-wtf-social.png">
     <meta name="twitter:image:alt" content="secrets.wtf public exposure listing for LM Studio servers">
     <meta name="twitter:creator" content="@ImVibhek">
@@ -60,7 +60,7 @@
                 "@id": "https://secrets.wtf/listings/lm-studio/#webpage",
                 "url": "https://secrets.wtf/listings/lm-studio/",
                 "name": "LM Studio Local Server Exposure | secrets.wtf",
-                "description": "Public LM Studio server exposure listing with live host rows and /v1/models checks.",
+                "description": "Public LM Studio server exposure listing with host rows and observed models.",
                 "inLanguage": "en-US",
                 "dateModified": "2026-06-20",
                 "isAccessibleForFree": true,
@@ -82,7 +82,7 @@
                 "@type": "Dataset",
                 "@id": "https://secrets.wtf/listings/lm-studio/#dataset",
                 "name": "LM Studio exposed local server hosts",
-                "description": "Public LM Studio server exposure listing with live host rows and /v1/models checks.",
+                "description": "Public LM Studio server exposure listing with host rows and observed models.",
                 "url": "https://secrets.wtf/listings/lm-studio/",
                 "mainEntityOfPage": {
                     "@id": "https://secrets.wtf/listings/lm-studio/#webpage"
@@ -113,7 +113,7 @@
                 ],
                 "image": "https://secrets.wtf/assets/secrets-wtf-social.png",
                 "citation": "https://opendoors.wtf/blog/lmstudio-api-security/",
-                "measurementTechnique": "/v1/models endpoint check",
+                "measurementTechnique": "Public host inventory and model observations",
                 "variableMeasured": [
                     "host endpoint",
                     "model list response",
@@ -227,8 +227,8 @@
                     <strong>87</strong>
                 </div>
                 <div>
-                    <span>check</span>
-                    <strong>/v1/models</strong>
+                    <span>data</span>
+                    <strong>hosts + models</strong>
                 </div>
                 <div>
                     <span>link</span>
@@ -245,10 +245,6 @@
                     <span>Filter hosts</span>
                     <input id="host-filter" type="search" placeholder="host, model, status..." autocomplete="off">
                 </label>
-                <div class="host-actions">
-                    <button class="button small secondary" id="check-visible-hosts" type="button">Check page</button>
-                    <button class="button small secondary" id="check-all-hosts" type="button">Check all</button>
-                </div>
             </div>
             <details class="contrib-panel" data-default-port="1234">
                 <summary>Add or export hosts</summary>
@@ -264,7 +260,6 @@
                     <button class="button small" type="submit">Add</button>
                 </form>
                 <div class="state-actions">
-                    <button class="button small secondary" id="sync-local-hosts" type="button">Sync added</button>
                     <button class="button small secondary" id="export-local-hosts" type="button">Export additions</button>
                     <button class="button small secondary" id="clear-local-hosts" type="button">Clear additions</button>
                 </div>
@@ -274,8 +269,7 @@
                 <div class="host-row host-head">
                     <span>host</span>
                     <span>models</span>
-                    <span>status</span>
-                    <span>check</span>
+                    <span>state</span>
                 </div>
             </div>
         </section>
