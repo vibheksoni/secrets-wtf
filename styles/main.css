@@ -374,7 +374,7 @@ h3 {
 
 .listing-row {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.7fr) auto;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.6fr) minmax(270px, 0.45fr);
     gap: 18px;
     align-items: stretch;
     padding: 16px;
@@ -407,13 +407,15 @@ h3 {
 
 .row-actions {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-content: start;
     gap: 8px;
-    min-width: 126px;
+    min-width: 0;
 }
 
 .row-actions .button {
     width: 100%;
+    min-height: 44px;
 }
 
 .listing-card {
