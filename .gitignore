@@ -8,4 +8,9 @@ desktop.ini
 .codex-*
 .*.json
 .*/
+!.github/
+!.github/ISSUE_TEMPLATE/
+!.github/ISSUE_TEMPLATE/*.yml
+!.well-known/
+!.well-known/discord
 scripts/scan_hosts.py
